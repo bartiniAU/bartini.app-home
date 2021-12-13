@@ -1,13 +1,32 @@
 import react from "react";
 import styled, { css } from "styled-components";
-import GlobalStyle from "./styles/GlobalStyles";
+import "./App.css";
+import headerlogo from "./images/Bartini2_Wide_White.png";
 
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <div className="home-wrapper">
-        <h1>Home</h1>
+      <div
+        style={{
+          marginTop: "200px",
+          display: "flex",
+          flexWrap: "wrap",
+          flexDirection: "column",
+          maxWidth: "900px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      >
+        <img
+          src={headerlogo}
+          style={{
+            background: "none",
+            width: "100%",
+            textAlign: "center",
+            alignContent: "center",
+          }}
+        />
+        <h1>Coming soon to android & ios.</h1>
       </div>
     </>
   );
