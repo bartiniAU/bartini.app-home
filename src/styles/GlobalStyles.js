@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     background: linear-gradient(var(--primary) 0%, var(--secondary) 100%) no-repeat;
-    height: 100vw;
+    height: 800px;
   }
 
   button {
