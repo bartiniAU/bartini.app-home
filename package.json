@@ -8,11 +8,10 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-particles-js": "^3.6.0",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
+    "react-tsparticles": "^1.37.5",
     "styled-components": "^5.3.3",
-    "tsparticles": "^1.37.5",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^1.0.1"
   },
