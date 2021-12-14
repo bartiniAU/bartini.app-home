@@ -1,7 +1,8 @@
-import react from "react";
+// import react from "react";
 import styled, { css } from "styled-components";
 import "./App.css";
 import headerlogo from "./images/Bartini2_Wide_White.png";
+import arrow from "./images/arrow-right.png";
 
 function App() {
   return (
@@ -12,13 +13,14 @@ function App() {
           display: "flex",
           flexWrap: "wrap",
           flexDirection: "column",
-          maxWidth: "900px",
+          maxWidth: "600px",
           marginLeft: "auto",
           marginRight: "auto",
         }}
       >
         <img
           src={headerlogo}
+          alt="bartini logo"
           style={{
             background: "none",
             width: "100%",
@@ -26,7 +28,25 @@ function App() {
             alignContent: "center",
           }}
         />
-        <h1>Coming soon to android & ios.</h1>
+        <h1 style={{ marginTop: "10px", opacity: "80%" }}>
+          Cocktails made simple.
+        </h1>
+
+        <Button
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "100px",
+          }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.open("https://www.instagram.com/Bartini.app/");
+          }}
+        >
+          Coming soon{" "}
+          <img src={arrow} style={{ height: "40%", padding: "0 0 0 20px" }} />
+        </Button>
       </div>
     </>
   );
@@ -35,23 +55,21 @@ function App() {
 export default App;
 
 const Button = styled.button`
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 200px;
   background: transparent;
-  border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
-  margin: 0.5em 1em;
-  padding: 0.25em 1em;
-  transition: 2s;
+  border-radius: 30px;
+  border: 1px solid white;
+  color: white;
+  opacity: 80%;
+  margin: 0 auto;
+  transition: 1s;
+  font-weight: 300;
+  font-size: 18px;
 
   &:hover {
-    font-size: 40px;
-    height: 200px;
-    width: 200px;
-  }
-  &.dead {
-    color: black;
+    background: white;
+    color: var(--primary);
   }
 
   ${(props) =>
