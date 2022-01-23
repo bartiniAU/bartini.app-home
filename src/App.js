@@ -2,7 +2,6 @@ import React from "react";
 import styled, { css } from "styled-components";
 import "./App.css";
 import headerlogo from "./images/Bartini2_Wide_White.png";
-import arrow from "./images/arrow-right.png";
 import { Bounce } from "react-reveal";
 import Fade from "react-reveal/Fade";
 import Typewriter from "typewriter-effect";
@@ -22,8 +21,6 @@ function App() {
               style={{
                 background: "none",
                 width: "100%",
-                textAlign: "center",
-                alignContent: "center",
               }}
             />
           </Fade>
@@ -58,11 +55,22 @@ function App() {
               }}
             >
               Coming soon{" "}
-              <img
-                src={arrow}
-                alt=">"
-                style={{ height: "40%", padding: "0 0 0 20px" }}
-              />
+              <svg
+                style={{ marginLeft: 5 }}
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <line x1="13" y1="18" x2="19" y2="12" />
+                <line x1="13" y1="6" x2="19" y2="12" />
+              </svg>
             </Button>
           </Bounce>
         </div>
@@ -91,6 +99,16 @@ const Button = styled.button`
   &:hover {
     background: white;
     color: var(--primary);
+  }
+
+  & > svg {
+    transition: 1s;
+    stroke: white;
+  }
+
+  &:hover > svg {
+    transition: 1s;
+    stroke: var(--primary);
   }
 
   ${(props) =>

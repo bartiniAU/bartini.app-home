@@ -6,6 +6,7 @@ body,
 #root {
   height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 body {
   background: linear-gradient(var(--primary) 0%, var(--secondary) 100%)
@@ -16,10 +17,8 @@ body {
   justify-content: center;
 }
 .home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 600px;
+  min-width: 250px;
   padding: 200px 20px 0 20px;
 }
 h1 {
