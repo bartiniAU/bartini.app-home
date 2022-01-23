@@ -7,79 +7,14 @@ import { Bounce } from "react-reveal";
 import Fade from "react-reveal/Fade";
 import Typewriter from "typewriter-effect";
 import Particles from "react-tsparticles";
+import { particles } from "./config";
 
 function App() {
   return (
     <>
-      <Particles
-        id="tsparticles"
-        options={{
-          fpsLimit: 60,
-          interactivity: {
-            events: {
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
-              resize: true,
-            },
-            modes: {
-              bubble: {
-                distance: 400,
-                duration: 2,
-                opacity: 0.8,
-                size: 80,
-              },
-              push: {
-                quantity: 4,
-              },
-            },
-          },
-          particles: {
-            color: {
-              value: "#ffffff",
-            },
-            move: {
-              direction: "top",
-              enable: true,
-              outMode: "out",
-              random: false,
-              speed: 2,
-              straight: false,
-            },
-            number: {
-              density: {
-                enable: true,
-                value_area: 800,
-              },
-              value: 100,
-            },
-            opacity: {
-              value: 0.5,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              random: true,
-              value: 5,
-            },
-          },
-          detectRetina: true,
-        }}
-      />
-      <div className="home">
-        <div
-          style={{
-            marginTop: "200px",
-            display: "flex",
-            flexWrap: "wrap",
-            flexDirection: "column",
-            maxWidth: "600px",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
+      <Particles id="tsparticles" options={particles} />
+      <div className="homeContainer">
+        <div className="home">
           <Fade top distance="40px">
             <img
               src={headerlogo}
@@ -92,7 +27,7 @@ function App() {
               }}
             />
           </Fade>
-          <h1 style={{ marginTop: "10px", opacity: "80%" }}>
+          <h1 style={{ marginTop: "10px", opacity: "80%", height: 50 }}>
             <Typewriter
               options={{
                 strings: [
@@ -143,13 +78,15 @@ const Button = styled.button`
   width: 200px;
   background: transparent;
   border-radius: 30px;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   opacity: 80%;
   margin: 0 auto;
   transition: 1s;
   font-weight: 300;
   font-size: 18px;
+  display: flex;
+  align-items: center;
 
   &:hover {
     background: white;
